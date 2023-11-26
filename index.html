@@ -14,9 +14,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/modern-normalize.css" />
+    <!-- <link rel="stylesheet" href="./css/modern-normalize.css" /> -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="modal.js" />
 
     <!--Title-->
     <title>GoIT-Homework-03</title>
@@ -57,6 +56,24 @@
           >
         </li>
       </ul>
+    </header>
+
+    <header class="mobile-nav">
+      <div class="mobile-container">
+        <a href="" class="monile-logo-link">
+          <span class="logo-web">Web</span
+          ><span class="logo-studio-nav">STUDIO</span>
+        </a>
+        <svg
+          width="32"
+          height="22"
+          class="js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <use href="./images/icons.svg#hamburger"></use>
+        </svg>
+      </div>
     </header>
 
     <main>
@@ -121,16 +138,18 @@
             </label>
           </form>
           <div class="check-agreement">
-            <input type="checkbox" name="privaceCheck" />
-            <label for="checkbox">
+            <label for="checkbox" class="agree-checkbox">
+              <input type="checkbox" name="agree" class="agree" />
+              <svg width="16" height="16" class="agree-check-icon">
+                <use href="./images/icons.svg#checkbox"></use>
+              </svg>
               <span class="input-label"
                 >I accept the terms and conditions of the
-                <a href="">Privacy Policy</a></span
+                <a href="#">Privacy Policy</a></span
               >
             </label>
+            <button class="modal-send" type="submit">Send</button>
           </div>
-
-          <button class="service-btn" type="submit">Send</button>
         </div>
       </div>
 
@@ -425,6 +444,7 @@
         </form>
       </div>
     </footer>
-    <script src="modal.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>
