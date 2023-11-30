@@ -3,22 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800;900&family=Roboto:wght@400;500;700;900&display=swap"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+      integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <link rel="stylesheet" href="./css/modern-normalize.css" /> -->
     <link rel="stylesheet" href="./css/styles.css" />
 
     <!--Title-->
-    <title>GoIT-Homework-03</title>
+    <title>GoIT-Homework-07</title>
   </head>
 
   <body>
@@ -58,24 +59,6 @@
       </ul>
     </header>
 
-    <header class="mobile-nav">
-      <div class="mobile-container">
-        <a href="" class="monile-logo-link">
-          <span class="logo-web">Web</span
-          ><span class="logo-studio-nav">STUDIO</span>
-        </a>
-        <svg
-          width="32"
-          height="22"
-          class="js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <use href="./images/icons.svg#hamburger"></use>
-        </svg>
-      </div>
-    </header>
-
     <main>
       <section class="hero">
         <h1 class="hero-text">
@@ -94,39 +77,40 @@
               <use href="./images/icons.svg#close"></use>
             </svg>
           </button>
-          <h2 class="form-name">
+
+          <div class="modal-container">
+          <h3 class="form-name">
             Leave your contacts and we will call you back
-          </h2>
+          </h3>
           <form name="send-data" class="form">
+            <div class="input-container"></div>
             <label for="name" class="service-label">
               <span class="input-label">Name</span>
-              <div class="input-container">
-                <input type="text" class="service-text" />
+              <input type="text" class="service-text" />
                 <svg width="18" height="18" class="service-icon">
                   <use href="./images/icons.svg#person"></use>
                 </svg>
-              </div>
-            </label>
+              </label>
 
+            <div class="input-container"></div>
             <label for="name" class="service-label">
               <span class="input-label">Phone</span>
-              <div class="input-container">
-                <input type="text" class="service-text" />
+              <input type="text" class="service-text" />
                 <svg width="18" height="18" class="service-icon">
                   <use href="./images/icons.svg#phone"></use>
                 </svg>
-              </div>
-            </label>
+              </label>
+            </div>
 
+            <div class="input-container">
             <label for="name" class="service-label">
               <span class="input-label">Mail</span>
-              <div class="input-container">
-                <input type="text" class="service-text" />
+              <input type="text" class="service-text" />
                 <svg width="18" height="18" class="service-icon">
                   <use href="./images/icons.svg#email"></use>
                 </svg>
-              </div>
-            </label>
+              </label>
+            </div>
 
             <label for="comment" class="service-label">
               <span class="input-label">Comment</span>
@@ -393,55 +377,57 @@
     </main>
 
     <footer class="footer-bg-dark">
-      <div class="footer">
-        <a href="#" class="logo-link"
-          ><span class="logo-web">WEB</span>STUDIO</a
-        >
+      <div class="footer-container container">
+        <div class="footer-text-container">
+          <a href="#" class="logo-link"
+            ><span class="logo-web">WEB</span>STUDIO</a
+          >
 
-        <p class="footer-text">
-          Increase the flow of customers and<br />
-          sales for your business with digital<br />
-          marketing & growth solutions.
-        </p>
-      </div>
-      <!--Social-Media-Footer-->
-      <div class="social-footer-container">
-        <h3 class="social-header">Social Media</h3>
-        <div class="social-icon-footer">
-          <a class="footer-icons">
-            <svg width="24" height="24">
-              <use href="./images/icons.svg#instagram-2"></use>
-            </svg>
-          </a>
-          <a class="footer-icons">
-            <svg width="24" height="24">
-              <use href="./images/icons.svg#twitter-1"></use>
-            </svg>
-          </a>
-          <a class="footer-icons">
-            <svg width="24" height="24">
-              <use href="./images/icons.svg#facebook-1"></use>
-            </svg>
-          </a>
-          <a class="footer-icons">
-            <svg width="23" height="23">
-              <use href="./images/icons.svg#linkedin-1"></use>
-            </svg>
-          </a>
+          <p class="footer-text">
+            Increase the flow of customers and<br />
+            sales for your business with digital<br />
+            marketing & growth solutions.
+          </p>
         </div>
-      </div>
-      <!--Footer Subscribe-->
-      <div class="footer-sub">
-        <p class="footer-sub-text">Subscribe</p>
-        <form>
-          <input type="text" placeholder="Email" class="input-sub" />
-          <button class="btn-sub">
-            Subscribe
-            <svg width="24" height="24">
-              <use href="./images/icons.svg#send"></use>
-            </svg>
-          </button>
-        </form>
+        <!--Social-Media-Footer-->
+        <div class="social-footer-container">
+          <h3 class="social-header">Social Media</h3>
+          <div class="social-icon-footer">
+            <a class="footer-icons">
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#instagram-2"></use>
+              </svg>
+            </a>
+            <a class="footer-icons">
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#twitter-1"></use>
+              </svg>
+            </a>
+            <a class="footer-icons">
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#facebook-1"></use>
+              </svg>
+            </a>
+            <a class="footer-icons">
+              <svg width="23" height="23">
+                <use href="./images/icons.svg#linkedin-1"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!--Footer Subscribe-->
+        <div class="footer-sub">
+          <p class="footer-sub-text">Subscribe</p>
+          <form>
+            <input type="text" placeholder="Email" class="input-sub" />
+            <button class="btn-sub">
+              Subscribe
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <script src="js/mobile-menu.js"></script>

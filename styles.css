@@ -36,11 +36,11 @@
     padding: 0;
 }
 
-/* *,
-*::before,
-*::after {
-  box-sizing: border-box;
-} */
+.container {
+    max-width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
 
 body {
     font-family: "Roboto", sans-serif;
@@ -51,10 +51,11 @@ body {
     align-items: center;
     border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
     background: var(--WHITE, #fff);
-    width: 1440px;
+    /* width: 1440px; */
     height: 72px;
     flex-shrink: 0;
     padding-left: 156px;
+    justify-content: center;
 }
 
 .logo-container {
@@ -88,7 +89,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1440px;
+    /* width: 1440px; */
 }
 
 .menu-link {
@@ -158,7 +159,7 @@ ul {
     padding-bottom: 188px;
     text-align: center;
     background-color: #2e2f42;
-    width: 1440px;
+    /* width: 1440px; */
 
     /* height: 600px; */
 }
@@ -173,7 +174,7 @@ ul {
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
-    width: 1440px;
+    /* width: 1440px; */
 }
 
 
@@ -258,8 +259,9 @@ ul {
     margin-top: 24px;
     color: var(--WHITE, #FFF);
     text-align: center;
-    margin-left: 130px;
+    margin-left: 150px;
     border-color: transparent;
+    margin-bottom: 24px;
 }
 
 .modal-send:hover {
@@ -267,16 +269,25 @@ ul {
 }
 
 .modal {
+    position: absolute;
+    top: 47%;
+    left: 50%;
     width: 408px;
-    height: 584px;
-    background-color: white;
     border-radius: 4px;
-    padding: 24px;
+    background: var(--DAIRY, #FCFCFC);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    transform: translate(-50%, -50%) scale(1);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
     pointer-events: none;
     opacity: 0;
+    visibility: hidden;
 }
 
 .modal-close-btn {
@@ -298,6 +309,10 @@ ul {
 .modal-close-btn:hover {
     fill: currentColor;
     border: 1px solid currentColor;
+}
+
+.modal-container {
+    margin: 70px 24px 24px;
 }
 
 .agree {
@@ -336,6 +351,7 @@ ul {
     flex-direction: column;
     margin-bottom: 8px;
     position: relative;
+    align-items: center;
 }
 
 .input-container {
@@ -444,7 +460,7 @@ ul {
 
 .services-section {
     display: flex;
-    width: 1440px;
+    /* width: 1440px; */
     /* flex-direction: column;
     align-items: flex-start; */
     /* gap: 8px; */
@@ -495,7 +511,7 @@ ul {
     letter-spacing: 0.72px;
     text-transform: capitalize;
     padding-bottom: 72px;
-    width: 1440px;
+    /* width: 1440px; */
 }
 
 .device-images-list {
@@ -515,7 +531,7 @@ ul {
 
 .header-team {
     background-color: var(--CLOUD, #f4f4fd);
-    width: 1440px;
+    /* width: 1440px; */
     flex-shrink: 0;
     padding-bottom: 120px;
 }
@@ -605,9 +621,7 @@ ul {
     padding-top: 156px;
     padding-bottom: 156px;
     padding-left: 10%;
-    display: flex;
-    width: 1440px;
-    /* height: 312px; */
+    /* display: flex; */
 }
 
 .footer-div {
@@ -632,15 +646,9 @@ ul {
     height: 21px;
 }
 
-.footer-text {
+.footer-text-container {
     color: var(--CLOUD, #f4f4fd);
     line-height: 24px;
-}
-
-.footer-text {
-    padding-left: 0;
-    padding-bottom: 100px;
-    padding-top: 17.5px;
 }
 
 .logo-link {
@@ -665,7 +673,7 @@ ul {
     background-color: var(--CLOUD, #f4f4fd);
     padding-top: 69px;
     padding-bottom: 72px;
-    width: 1440px;
+    /* width: 1440px; */
 }
 
 .buttons {
@@ -890,7 +898,7 @@ ul {
 /*Customers Section*/
 
 .customer {
-    width: 1440px;
+    /* width: 1440px; */
     background: var(--WHITE, #fff);
     padding-top: 120px;
     padding-bottom: 120px;
@@ -952,6 +960,7 @@ ul {
 
 .social-footer-container {
     padding-right: 80px;
+    margin-left: 120px;
 }
 
 .footer-icons {
@@ -966,6 +975,11 @@ ul {
 
 .footer {
     padding-right: 120px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
 }
 
 .btn-sub {
@@ -1013,9 +1027,3 @@ ul {
 /*End of Footer styling*/
 
 /*Css Media Query*/
-
-@media (min-width: 428px) {
-    .mobile-container {
-        width: 428px;
-    }
-}
